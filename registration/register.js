@@ -1,5 +1,8 @@
 "use strict";
 
+addEventListener('DOMContentLoaded', () => {
+const registerForm = document.querySelector("#register"); 
+
 regForm.onsubmit = function (event) {
     // Prevent the form from refreshing the page,
     // as it will do by default when the Submit event is triggered:
@@ -36,3 +39,4 @@ function register (regData) {
             window.location.assign("/index.html");  // redirect
         });
 }
+}) //END OF DOMCONTENTLOADED EVENT LISTENER
