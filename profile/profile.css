@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
  
-/* Assigning all the same properties to the body */
 body{
     height: 100vh;
     display: flex;
