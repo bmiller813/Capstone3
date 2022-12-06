@@ -2,10 +2,31 @@
 
 const api = "https://microbloglite.herokuapp.com";
 
-addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
 
 const registerForm = document.querySelector("#register"); 
 
+function register(regData) {
+    const options = { 
+        method: "POST",
+        headers: {
+            "accept": "application/json",
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(regData),
+    };
+
+    return fetch(api + "/auth/login", options)
+        .then(response => response.json())
+        .then(regData => {
+            console.log(regData);
+            window.localStorage.setItem("login-data", JSON.stringify(regData));
+            window.location.assign("/index.html");  // redirect
+            alert('Successful Registration. Log in.');
+        });
+}
+
+//Might have to move above 
 regForm.onsubmit = function (event) {
     // Prevent the form from refreshing the page,
     // as it will do by default when the Submit event is triggered:
@@ -25,23 +46,4 @@ regForm.onsubmit = function (event) {
     // Time to actually process the login using the function from auth.js!
     register(regData);
 };
-
-function register(regData) {
-    const options = { 
-        method: "POST",
-        headers: {
-            "accept": "application/json",
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(regData),
-    };
-
-    return fetch(api + "/auth/login", options)
-        .then(response => response.json())
-        .then(regData => {
-            console.log(regData);
-            window.localStorage.setItem("login-data", JSON.stringify(regData));
-            window.location.assign("/index.html");  // redirect
-        });
-}
 }) //END OF DOMCONTENTLOADED EVENT LISTENER
