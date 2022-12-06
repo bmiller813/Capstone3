@@ -16,7 +16,7 @@ function getLoginData () {
 // You can use this to see whether the current visitor is logged in. 
 // Returns either `true` or `false`.
 function isLoggedIn () {
-    const loginData = getLoginData();
+    const loginData = getLoginData();  //PROFILE PAGE
     return Boolean(loginData.token);
 }
 
