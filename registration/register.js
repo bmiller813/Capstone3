@@ -1,6 +1,9 @@
 "use strict";
 
+const api = "https://microbloglite.herokuapp.com";
+
 addEventListener('DOMContentLoaded', () => {
+
 const registerForm = document.querySelector("#register"); 
 
 regForm.onsubmit = function (event) {
@@ -17,16 +20,17 @@ regForm.onsubmit = function (event) {
     }
 
     // Disables the button after the form has been submitted already:
-    registerForm.loginButton.disabled = true;
+    registerForm.registerButton.disabled = true;
 
     // Time to actually process the login using the function from auth.js!
     register(regData);
 };
 
-function register (regData) {
+function register(regData) {
     const options = { 
         method: "POST",
         headers: {
+            "accept": "application/json",
             "Content-Type": "application/json",
         },
         body: JSON.stringify(regData),
@@ -35,6 +39,7 @@ function register (regData) {
     return fetch(api + "/auth/login", options)
         .then(response => response.json())
         .then(regData => {
+            console.log(regData);
             window.localStorage.setItem("login-data", JSON.stringify(regData));
             window.location.assign("/index.html");  // redirect
         });
