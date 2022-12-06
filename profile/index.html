@@ -1,6 +1,10 @@
 <html>
     <head>
         <link rel="stylesheet" href="profile.css">
+        <script src="profile.js"></script>
+        <script>
+            if (isLoggedIn() === true) window.location.replace("/index.html");
+        </script>
     </head>
     <body>
         <div class="container">
