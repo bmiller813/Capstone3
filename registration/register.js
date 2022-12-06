@@ -4,7 +4,27 @@ const api = "https://microbloglite.herokuapp.com";
 
 document.addEventListener('DOMContentLoaded', () => {
 
-const registerForm = document.querySelector("#register"); 
+const regForm = document.querySelector("#register"); 
+
+regForm.onsubmit = function (event) {
+    // Prevent the form from refreshing the page,
+    // as it will do by default when the Submit event is triggered:
+    event.preventDefault();
+
+    // We can use loginForm.username (for example) to access
+    // the input element in the form which has the ID of "username".
+    const regData = {
+        username: username.value,
+        fullname: fullname.value,
+        password: password.value,
+    }
+
+    // Disables the button after the form has been submitted already:
+    registerForm.registerButton.disabled = true;
+
+    // Time to actually process the login using the function from auth.js!
+    register(regData);
+};
 
 function register(regData) {
     const options = { 
@@ -27,23 +47,5 @@ function register(regData) {
 }
 
 //Might have to move above 
-regForm.onsubmit = function (event) {
-    // Prevent the form from refreshing the page,
-    // as it will do by default when the Submit event is triggered:
-    event.preventDefault();
 
-    // We can use loginForm.username (for example) to access
-    // the input element in the form which has the ID of "username".
-    const regData = {
-        username: registerForm.username.value,
-        fullname: registerForm.fullname.value,
-        password: registerForm.password.value,
-    }
-
-    // Disables the button after the form has been submitted already:
-    registerForm.registerButton.disabled = true;
-
-    // Time to actually process the login using the function from auth.js!
-    register(regData);
-};
 }) //END OF DOMCONTENTLOADED EVENT LISTENER
