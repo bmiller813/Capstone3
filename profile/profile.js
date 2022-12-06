@@ -24,8 +24,8 @@ const options = {
 submit.addEventListener("click", ()=>{
     fetch(api + "/api/posts", options)
         .then(response => response.json())
-        .then(loginData => {
-            localStorage.setItem("login-data", JSON.stringify(loginData));
+        .then(data => {
+            localStorage.setItem("login-data", JSON.stringify(data));
             location.assign("/posts");  // redirect
         });
 }); //END OF ADDEVENTLISTENER 
