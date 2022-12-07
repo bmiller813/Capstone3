@@ -1,8 +1,8 @@
 <html>
     <head>
         <link rel="stylesheet" href="profile.css">
-        <script src="auth.js"></script>
-        <script src="profile.js"></script>
+        <script src="/auth.js"></script>
+        <script src="/profile/profile.js"></script>
         <script>
             if (isLoggedIn() === false) window.location.replace("/index.html");
         </script>
@@ -11,7 +11,7 @@
         <div class="container">
         <div class="main">
            <div class="topbar">
-            <button type="button" class="btn btn-default btn-sm">
+            <button type="button" id="logoutBtn" class="btn btn-default btn-sm">
                 <span class="glyphicon glyphicon-log-out"></span> Log out
               </button>
             <a href="">Support</a>

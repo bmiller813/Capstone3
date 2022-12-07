@@ -78,3 +78,12 @@ function logout () {
             window.location.assign("/");  // redirect to landing page
         });
 }
+
+document.addEventListener("DOMContentLoaded", ()=>{
+    const logoutBtn = document.getElementById("logoutBtn")
+
+    logoutBtn.addEventListener("click", ()=>{
+        logout();
+        
+    });
+});
