@@ -1,68 +1,20 @@
 /* Posts Page JavaScript */
 "use strict";
 
-const api = "https://microbloglite.herokuapp.com";
 const postArea = document.getElementById("postArea");
+const baseURL = "https://microbloglite.herokuapp.com";
+const endpoint = "/api/posts?limit=100&offset=0";
 
-function buildCard(section, mountain) {
-    //created the card
-    const div = document.createElement("div");
-    div.className = "card";
-    //put inside the document or card section which is a div being used
-    section.appendChild(div);
-
-    let cardTitle = document.createElement("h5");
-    cardTitle.className = "card-title";
-    cardTitle.innerText = mountain.name;
-
-    let desc = document.createElement("p");
-    desc.innerText = mountain.desc;
-
-    let timeStamp = document.createElement("p");
-    timeStamp.innerText = ``;
-
-    const divBody = document.createElement("div");
-    divBody.className = "card-body";
-    div.appendChild(divBody);
-    divBody.append(cardTitle, desc, timeStamp);
-}
-document.addEventListener("DOMContentLoaded", ()=>{
-
-    const options = { 
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-                  username: localStorage.username,
-                  message: message.value,
-                  timestamp: time
-    })
+fetch(baseURL + endpoint, {
+    method: "GET",
+    headers: {
+        'accept': 'application/json',
+        'Authorization': `Bearer ${localStorage.token}` // use the token we stored on the client browser disk for later use on the index.html with main.js code
     }
-
-    const options2 = { 
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-                  username: localStorage.username,
-                  message: message.value,
-                  timestamp: time
-    })
-    }
-
-    fetch(api + "/api/posts", options)
-        .then(response => response.json())
-        .then(data => {
-            localStorage.setItem("login-data", JSON.stringify(data));
-            
-        });
-    
-    fetch(api + "/api/posts", options2)
-        .then(response => response.json())
-        .then(data => {
-            buildCard(postArea, data)
-        });
-}); //END OF ADDEVENTLISTENER 
-
+}).then((response) => {
+    return response.json()
+}).then((data)=>{
+    data.forEach(post => {
+        postArea.innerHTML += <div class="card shadow p-3 mb-5">${post.text}</div>;
+    });
+})
