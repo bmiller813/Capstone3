@@ -22,7 +22,7 @@
   <script src="/auth.js"></script>
   <script src="/posts/posts.js"></script>
   <script>
-    if (isLoggedIn() === false) window.location.replace("/");
+    if (isLoggedIn() === false) window.location.replace("/index.html");
   </script>
 </head>
 
@@ -36,14 +36,15 @@
     <span class="glyphicon glyphicon-log-out"></span> Log out
   </button>
 
-  <button type="button" class="btn btn-default btn-sm">
-    <span class="glyphicon glyphicon-log-out"></span> Profile
-  </button>
+  <a href="/profile/index.html"><button type="button" class="btn btn-default btn-sm">
+      <span class="glyphicon glyphicon-log-out"></span> Profile
+    </button>
+  </a>
 
   <div class="row">
     <div class="leftcolumn">
       <div id="postArea">
-    <!--=============POST LOCATION===============-->
+        <!--=============POST LOCATION===============-->
       </div>
     </div>
     <div class="rightcolumn">
@@ -79,7 +80,7 @@
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"></script>
 
-  <script src="posts.js"></script>
+ 
 </body>
 
 </html>

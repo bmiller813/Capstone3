@@ -4,42 +4,39 @@
 
 const api = "https://microbloglite.herokuapp.com";
 
-const time = when.toLocaleTimeString();
-
-const message = document.getElementById("w3review")
+const message = document.getElementById("msgArea")
 const submit = document.getElementById("messageBtn")
 
-const options = { 
+const options = {
     method: "POST",
     headers: {
         "Content-Type": "application/json",
     },
     body: JSON.stringify({
-              username: localStorage.username,
-              message: message.value,
-              timestamp: time
-})
+        text: message.value,
+
+    })
 }
 
-submit.addEventListener("click", ()=>{
+submit.addEventListener("click", () => {
     fetch(api + "/api/posts", options)
         .then(response => response.json())
         .then(data => {
             localStorage.setItem("login-data", JSON.stringify(data));
-            location.assign("/posts");  // redirect
+            location.assign("posts/index.html");  // redirect
         });
 }); //END OF ADDEVENTLISTENER 
 
 
 
 //LOGOUT
-function isLoggedIn () {
+function isLoggedIn() {
     const loginData = getLoginData();
     return Boolean(loginData.token);
 }
 
 
-function getLoginData () {
+function getLoginData() {
     return JSON.parse(window.localStorage.getItem("login-data")) || {};
 }
 
@@ -52,9 +49,9 @@ logoutBtn.addEventListener("click", () => {
     const loginData = getLoginData();
 
     // GET /auth/logout
-    const options = { 
+    const options = {
         method: "GET",
-        headers: { 
+        headers: {
             // This header is how we authenticate our user with the
             // server for any API requests which require the user
             // to be logged-in in order to have access.

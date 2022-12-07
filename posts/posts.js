@@ -3,7 +3,7 @@
 
 const postArea = document.getElementById("postArea");
 const baseURL = "https://microbloglite.herokuapp.com";
-const endpoint = "/api/posts?limit=100&offset=0";
+const endpoint = "/api/posts";
 
 fetch(baseURL + endpoint, {
     method: "GET",
@@ -15,6 +15,6 @@ fetch(baseURL + endpoint, {
     return response.json()
 }).then((data)=>{
     data.forEach(post => {
-        postArea.innerHTML += <div class="card shadow p-3 mb-5">${post.text}</div>;
+        postArea.innerHTML += `<div class="card shadow p-3 mb-5">${post.text}</div>`;
     });
 })
