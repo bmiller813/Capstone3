@@ -19,12 +19,12 @@ function buildCard(section, mountain) {
     desc.innerText = mountain.desc;
 
     let timeStamp = document.createElement("p");
-    timeStamp.innerText = ${mountain.elevation} ft;
+    timeStamp.innerText = ``;
 
     const divBody = document.createElement("div");
     divBody.className = "card-body";
     div.appendChild(divBody);
-    divBody.append(cardTitle, desc, elevation);
+    divBody.append(cardTitle, desc, timeStamp);
 }
 document.addEventListener("DOMContentLoaded", ()=>{
 
