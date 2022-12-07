@@ -81,9 +81,10 @@ function logout () {
 
 document.addEventListener("DOMContentLoaded", ()=>{
     const logoutBtn = document.getElementById("logoutBtn")
+    if(logoutBtn != null){
+        logoutBtn.addEventListener("click", ()=>{
+            logout();  
+        });
+    }
 
-    logoutBtn.addEventListener("click", ()=>{
-        logout();
-        
-    });
 });
