@@ -13,6 +13,7 @@
     <title>Register on the Microblog Network!</title>
     <script src="register.js"></script>
 
+    <link rel="stylesheet" href="register.css">
 
 </head>
 
@@ -23,39 +24,40 @@
     </header>
 
     <main>
-
-        <div id="register">
+        <form class="col-lg-4 offset-lg-4" id="register">
             <div>
-                <label for="fullName">Full Name</label>
-                <input type="text" id="fullName" minlength="3">
-            </div>
+                <div>
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" minlength="3">
+                </div>
 
-            <div>
-                <label for="username">Username</label>
-                <input type="text" id="username" minlength="3">
-            </div>
+                <div>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" minlength="3">
+                </div>
 
-            <div>
-                <label for="password">Password</label>
-                <input type="password" id="password" minlength="6">
-            </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" minlength="6">
+                </div>
 
-            <div>
-                <label for="password">Confirm Password</label>
-                <input type="password" id="password" minlength="6">
-            </div>
+                <div>
+                    <label for="password">Confirm Password</label>
+                    <input type="password" id="password" minlength="6">
+                </div>
 
-            <div>
-                <button id="registerButton" type="submit">Register</button>
-            </div>
+                <div class="center">
+                    <button id="registerButton" type="submit">Register</button>
+                </div>
 
-            <div>
-                <a href="index.html">
-                    <button id="loginButton" type="submit">Already have an account?</button>
-                </a>
+                <div>
+                    Already have an account?
+                    <a href="/index.html">
+                    Login here!
+                    </a>
+                </div>
             </div>
-        </div>
-
+        </form>
     </main>
 
     <footer></footer>
