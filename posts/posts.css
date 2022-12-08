@@ -57,3 +57,7 @@
       padding: 0;
     }
   }
+
+  #logoutBtn:hover{
+    color: blue;
+  }
