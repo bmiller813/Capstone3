@@ -39,3 +39,19 @@ body{
 .content{
     background-color: whitesmoke;
 }
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  h1{
+    text-align: center;
+    }
+
+h5{
+    text-align: center;
+}
+
