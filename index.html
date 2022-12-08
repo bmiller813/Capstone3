@@ -19,7 +19,7 @@
     <!-- Run BEFORE page is finished loading (before window.onload): -->
     <script src="/auth.js"></script>
     <script>
-        if (isLoggedIn() === true) window.location.replace("/posts.html");
+        if (isLoggedIn() === true) window.location.replace("posts/index.html");
     </script>
 </head>
 <body>
@@ -36,7 +36,6 @@
                 <input type="text" id="username" minlength="3">
             </div>
 
-            <div class="col-lg-4">
                 <label for="password">Password</label>
                 <input type="password" id="password" minlength="6">
             </div>
@@ -46,9 +45,7 @@
             </div>
             
             <div>
-                Don't have an account?
-                <a href="registration/register.html">
-                Register here!
+
                 </a>
             </div>
         </form>

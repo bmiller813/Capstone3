@@ -1,12 +1,17 @@
 <html>
     <head>
         <link rel="stylesheet" href="profile.css">
+        <script src="/auth.js"></script>
+        <script src="/profile/profile.js"></script>
+        <script>
+            if (isLoggedIn() === false) window.location.replace("/index.html");
+        </script>
     </head>
     <body>
         <div class="container">
         <div class="main">
            <div class="topbar">
-            <button type="button" class="btn btn-default btn-sm">
+            <button type="button" id="logoutBtn" class="btn btn-default btn-sm">
                 <span class="glyphicon glyphicon-log-out"></span> Log out
               </button>
             <a href="">Support</a>
@@ -22,8 +27,8 @@
                             <div class="mt-3">
                                 <h1>Ken Kaneki</h1>
                                 <h5>“ The pain you feel today will be the<br> strength you'll have tomorrow.”</h5>
-                                <textarea id="w3review" name="w3review" rows="4" cols="60"></textarea>
-                                <input type="submit">
+                                <textarea id="msgArea" name="msgArea" rows="4" cols="60"></textarea>
+                                <input id="messageBtn" type="submit">
                             </div>
                         </div>
                     </div>

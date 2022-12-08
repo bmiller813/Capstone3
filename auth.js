@@ -42,7 +42,7 @@ function login (loginData) {
         .then(response => response.json())
         .then(loginData => {
             window.localStorage.setItem("login-data", JSON.stringify(loginData));
-            window.location.assign("/posts");  // redirect
+            window.location.assign("/posts/index.html");  // redirect
         });
 }
 
@@ -78,3 +78,13 @@ function logout () {
             window.location.assign("/");  // redirect to landing page
         });
 }
+
+document.addEventListener("DOMContentLoaded", ()=>{
+    const logoutBtn = document.getElementById("logoutBtn")
+    if(logoutBtn != null){
+        logoutBtn.addEventListener("click", ()=>{
+            logout();  
+        });
+    }
+
+});
