@@ -1,6 +1,6 @@
 body{
     margin-top: 20px;
-    background-color: lightgray;
+    background-color: black;
 }
 .main{
     padding: 15px;
@@ -55,3 +55,11 @@ h5{
     text-align: center;
 }
 
+.right {
+    min-width: 600px;
+    min-height: 20%;
+    margin: 0 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
