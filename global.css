@@ -12,3 +12,132 @@
     */
     /* outline: 1px dotted red; */
 }
+
+.nav {
+    display: block;
+    margin: 1em;
+    background-color: aliceblue;
+}
+
+.nav-block {
+    color: #333;
+    background-color: #2CAB15;
+    padding: 0.25em 1em;
+}
+
+.nav-block:hover {
+    background-color: darkgreen;
+    color: #AAF210;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav a {
+    background-color: black;
+    color: goldenrod;
+    font-size: 1em;
+    padding: 0.25em 1em;
+    margin-left: 20px;
+    border-radius: 0.25em;
+    display: inline-block;
+}
+
+#nav div#menuBtn {
+    display: inline-block;
+    cursor: pointer;
+    background: none;
+
+}
+
+#menuBar1,
+#menuBar2,
+#menuBar3 {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change #menuBar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change #menuBar2 {
+    opacity: 0;
+}
+
+.change #menuBar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+.navbar .container {
+    max-width: 100%;
+}
+
+#menuBtn {
+    margin: 15px;
+}
+
+.main {
+    background-image: url(https://media.tenor.com/OMAJrIxWV98AAAAC/kaneki-ken-tokyo-ghoul.gif);
+
+    width: 100%;
+    height: 50vh;
+}
+
+#welcome {
+    display: inline;
+    padding: 1000px;
+    width: 10%;
+
+}
+
+.about {
+    display: inline;
+    color: white;
+    text-align: center;
+    font-size: larger;
+}
+
+#loginForm {
+    z-index: -1;
+    text-align: center;
+    /* padding: 100px; */
+}
+
+
+#userBox,
+#passBox {
+    margin: auto;
+    width: auto;
+}
+
+/* ===============================side bar======================= */
+
+#sideBar {
+    position: fixed;
+    width: 300px;
+    left: -300px;
+    top: 79px;
+    bottom: 0;
+    z-index: 1000;
+    background-color: black;
+    opacity: 0;
+}
+
+#sideList a{
+    display:block;
+    color: white;
+    padding: 1em;
+    text-decoration: none;
+    font-size: larger;
+}
+
+.change #sideBar {
+    left: 0;
+    opacity: 0.8;
+    transition: all 300ms;
+}
