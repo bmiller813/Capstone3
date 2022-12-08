@@ -16,7 +16,7 @@ function getLoginData () {
 // You can use this to see whether the current visitor is logged in. 
 // Returns either `true` or `false`.
 function isLoggedIn () {
-    const loginData = getLoginData();
+    const loginData = getLoginData();  //PROFILE PAGE
     return Boolean(loginData.token);
 }
 
@@ -42,7 +42,7 @@ function login (loginData) {
         .then(response => response.json())
         .then(loginData => {
             window.localStorage.setItem("login-data", JSON.stringify(loginData));
-            window.location.assign("/posts");  // redirect
+            window.location.assign("/posts/index.html");  // redirect
         });
 }
 
@@ -78,3 +78,13 @@ function logout () {
             window.location.assign("/");  // redirect to landing page
         });
 }
+
+document.addEventListener("DOMContentLoaded", ()=>{
+    const logoutBtn = document.getElementById("logoutBtn")
+    if(logoutBtn != null){
+        logoutBtn.addEventListener("click", ()=>{
+            logout();  
+        });
+    }
+
+});

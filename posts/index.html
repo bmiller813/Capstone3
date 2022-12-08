@@ -1,42 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
-    <!-- Global CSS (CSS rules you want applied to all pages) -->
-    <link rel="stylesheet" href="/global.css">
+  <!-- Global CSS (CSS rules you want applied to all pages) -->
+  <link rel="stylesheet" href="/global.css">
 
-    <!-- Page-specific CSS -->
-    <link rel="stylesheet" href="posts.css">
+  <!-- Page-specific CSS -->
+  <link rel="stylesheet" href="posts.css">
 
-    <title>/POSTS</title>
+  <title>/POSTS</title>
 
-    <!-- Run BEFORE page is finished loading (before window.onload): -->
-    <script src="/auth.js"></script>
-    <script>
-        if (isLoggedIn() === false) window.location.replace("/");
-    </script>
+  <!-- Run BEFORE page is finished loading (before window.onload): -->
+  <script src="/auth.js"></script>
+  <script src="/posts/posts.js"></script>
+  <script>
+    if (isLoggedIn() === false) window.location.replace("/index.html");
+  </script>
 </head>
+
 <body>
 
-    <header>
-        <h1>POSTS PAGE</h1>
-    </header>
+  <header>
+    <h1>POSTS PAGE</h1>
+  </header>
 
-    <main></main>
+  <button type="button" id="logoutBtn" class="btn btn-default btn-sm">
+    <span class="glyphicon glyphicon-log-out"></span> Log out
+  </button>
 
-    <footer></footer>
+  <a href="/profile/index.html"><button type="button" class="btn btn-default btn-sm">
+      <span class="glyphicon glyphicon-log-out"></span> Profile
+    </button>
+  </a>
+
+  <div class="row">
+    <div class="leftcolumn">
+      <div id="postArea" class="container">
+        <!--=============POST LOCATION===============-->
+      </div>
+    </div>
+    <div class="rightcolumn">
+      <div class="card">
+        <h2>About Me</h2>
+        <img src="images/KenKaneki.jpg" height="110" width=115>
+        <p>You may know me from Tokyo Ghoul.<br>Former Japanese Literature student at Kamii University.</p>
+      </div>
+      <div class="card">
+        <h3>Popular Post</h3>
+        <img src="images/Daffy-Duck.jpg" height="80" width="80">
+        <img src="images/DarwinWatterson.png" height="80" width="80">
+        <img src="images/TweetyBird.jpg" height="80" width="80">
+      </div>
+      <div class="card">
+        <h3>Follow Me</h3>
+        <p>If you'd like</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <h2>Scroll down to load more post...</h2>
+  </div>
+
+  <main></main>
+
+  <footer></footer>
 
 
-    <!-- Bootstrap Bundle (including Popper for popovers) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <!-- Bootstrap Bundle (including Popper for popovers) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
 
-    <!-- Page-specific code -->
-    <script src="posts.js"></script>
+ 
 </body>
+
 </html>
