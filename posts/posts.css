@@ -84,3 +84,17 @@
   opacity: 0.8;
   transition: all 300ms;
 }
+
+#logoutBtn{
+  display:block;
+  color: white;
+  background-color: black;
+  padding: 1em;
+  text-decoration: none;
+  font-size: larger;
+  cursor: pointer;
+}
+
+#logoutBtn:hover{
+  color: #7b0b1e;
+}

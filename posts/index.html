@@ -21,7 +21,7 @@
   <!-- Run BEFORE page is finished loading (before window.onload): -->
   <script src="/auth.js"></script>
   <script src="/posts/posts.js"></script>
-  
+
   <script>
     if (isLoggedIn() === false) window.location.replace("/index.html");
   </script>
@@ -38,11 +38,10 @@
 
       <div class="sideBar2" id="sideBar2">
         <ul id="sideList">
-          <li><a href="registration/register.html">Registration</a></li>
-          <li><a href="profile/index.html">Profile</a></li>
+          <li><a href="/registration/register.html">Registration</a></li>
+          <li><a href="/profile/index.html">Profile</a></li>
           <li>
-            <button type="button" id="logoutBtn" class="btn btn-default btn-sm">
-              <span class="glyphicon glyphicon-log-out"></span>
+            <button type="button" id="logoutBtn">
               Logout
             </button>
           </li>
@@ -52,51 +51,85 @@
       <header>
         <h1>POSTS PAGE</h1>
       </header>
-    
+
     </div>
   </nav>
- 
-  <!-- <button type="button" id="logoutBtn" class="btn btn-default btn-sm">
-    <span class="glyphicon glyphicon-log-out"></span> Log out
-  </button> -->
+  <!-- ======================MAIN BODY======================= -->
 
-  <a href="/profile/index.html"><button type="button" class="btn btn-default btn-sm">
-      <span class="glyphicon glyphicon-log-out"></span> Profile
-    </button>
-  </a>
-
-  <div class="row">
-    <div class="leftcolumn">
-      <div id="postArea" class="container">
-        <!--=============POST LOCATION===============-->
+  <main>
+    <div class="row">
+      <div class="leftcolumn">
+        <div id="postArea" class="container">
+          <!--=============POST LOCATION===============-->
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <h2>About Me</h2>
+          <img src="images/KenKaneki.jpg" height="110" width=115>
+          <p>You may know me from Tokyo Ghoul.<br>Former Japanese Literature student at Kamii University.</p>
+        </div>
+        <div class="card">
+          <h3>Popular Post</h3>
+          <img src="images/Daffy-Duck.jpg" height="80" width="80">
+          <img src="images/DarwinWatterson.png" height="80" width="80">
+          <img src="images/TweetyBird.jpg" height="80" width="80">
+        </div>
+        <div class="card">
+          <h3>Follow Me</h3>
+          <p>If you'd like</p>
+        </div>
       </div>
     </div>
-    <div class="rightcolumn">
-      <div class="card">
-        <h2>About Me</h2>
-        <img src="images/KenKaneki.jpg" height="110" width=115>
-        <p>You may know me from Tokyo Ghoul.<br>Former Japanese Literature student at Kamii University.</p>
-      </div>
-      <div class="card">
-        <h3>Popular Post</h3>
-        <img src="images/Daffy-Duck.jpg" height="80" width="80">
-        <img src="images/DarwinWatterson.png" height="80" width="80">
-        <img src="images/TweetyBird.jpg" height="80" width="80">
-      </div>
-      <div class="card">
-        <h3>Follow Me</h3>
-        <p>If you'd like</p>
-      </div>
+  </main>
+
+  <!--=============================FOOTER===================================-->
+
+<footer>
+  <section class="news pt-5">
+    <div class="container-fluid pt-3 text-black">
+        <div class="row">
+            <div class="col-lg-11 m-auto">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <h3 class="pb-3">Category</h3>
+                        <p class="m-0"><a href="/index.html">Home</a></p>
+                        <p class="m-0"><a href="posts/index.html">Blog Post</a></p>
+                        <p class="m-0"><a href="profile/index.html">Profile</a></p>
+                    </div>
+                    <div class="col-lg-2">
+                        <h3 class="pb-3">Company</h3>
+                        <p class="m-0"><a href="#">About</a></p>
+                        <p class="m-0"><a href="#">News</a></p>
+                        <p class="m-0"><a href="#">FAQs</a></p>
+                        <p class="m-0"><a href="#">Contact</a></p>
+                    </div>
+                    <div class="col-lg-3">
+                        <h3 class="pb-3">Location</h3>
+                        <p>3030, This Weeb Ave, Tampa Fl<br>
+                            1-800-123-1235</p>
+
+                        <a href="#">AnteikuCollab@weeb.com</a>
+                    </div>
+                    <div class="col-lg-5">
+                        <h3 class="pb-3">Newsletter</h3>
+
+                        <form action="" class="d-flex" id="emailSub">
+                            <input type="text" class="sub p-3" placeholder="Enter Your Email">
+                            <button class="btns">Subscribe</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center pb-3 Copy">Copyright All rights reserved | This template is made with by PEO
+                WEB</p>
+        </div>
     </div>
-  </div>
-
-  <div class="footer">
-    <h2>Scroll down to load more post...</h2>
-  </div>
-
-  <main></main>
-
-  <footer></footer>
+    </div>
+</section>
+</footer>
 
 
   <!-- Bootstrap Bundle (including Popper for popovers) -->
@@ -104,7 +137,7 @@
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"></script>
 
-   <script src="/bar.js"></script>
+  <script src="/bar.js"></script>
 </body>
 
 </html>
