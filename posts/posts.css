@@ -15,6 +15,11 @@
     background: rgb(255, 255, 255);
   }
 
+  header{
+    display: inline;
+    padding: 100px;
+    text-align: center;
+  }
   .leftcolumn {
     float: left;
     width: 75%;
@@ -61,3 +66,21 @@
   #logoutBtn:hover{
     color: blue;
   }
+
+  #sideBar2 {
+    position: fixed;
+    width: 300px;
+    left: -300px;
+    top: 79px;
+    bottom: 0;
+    z-index: 1000;
+    background-color: black;
+    opacity: 0;
+    cursor:default;
+}
+
+.change #sideBar2 {
+  left: 0;
+  opacity: 0.8;
+  transition: all 300ms;
+}
