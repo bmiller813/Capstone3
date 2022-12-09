@@ -39,9 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
             });
     }); //END OF ADDEVENTLISTENER 
 
-    function findUser(section, user){
+    function findUser(){
         const div = document.getElementById("greetMsg");
-        const mess =  `Welcome ${loginData.username}
+        const mess =  `Welcome <b>${loginData.username}</b>
         <br> Post a message on the Anteiku Board`;
 
         div.innerHTML = mess

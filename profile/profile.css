@@ -86,9 +86,7 @@ body {
     margin-top: -400px;
     margin-left: 1230;
   }
-  /* #greetMsgU{
-    margin-top: -400px;
-    margin-left: 1230px;
-    font-weight:bolder;
-    font-size: larger;
-  } */                                                                                                                            
+
+  b{
+    color: red;
+  }
