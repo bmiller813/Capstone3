@@ -45,8 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
         <br> Post a message on the Anteiku Board`;
 
         div.innerHTML = mess
-
-        div.appendChild(greet);
     }
 
     fetch(baseURL + "/api/users/{username}", {
