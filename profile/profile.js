@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const message = document.getElementById("msgArea")
     const submit = document.getElementById("messageBtn")
 
-
+    const greeting = document.getElementById("greetMsg"); 
 
     submit.addEventListener("click", () => {
 
@@ -39,5 +39,27 @@ document.addEventListener("DOMContentLoaded", () => {
             });
     }); //END OF ADDEVENTLISTENER 
 
-});//DOMCONTENTLOADED ENDING
+    function findUser(){
+        const div = document.getElementById("greetMsg");
+        const mess =  `Welcome <b>${loginData.username}</b>
+        <br> Post a message on the Anteiku Board`;
 
+        div.innerHTML = mess
+
+        div.appendChild(greet);
+    }
+
+    fetch(baseURL + "/api/users/{username}", {
+        method: "GET",
+        headers: {
+            "accept": "application/json",
+            'Authorization': `Bearer ${loginData.token}`
+        },
+    }).then((response)=>{
+        return response.json()
+    }).then((data)=>{
+        // greeting.innerHTML += 
+        //  `Welcome ${loginData.username}! <br> Post a message on the Anteiku Board`;
+        findUser(greeting, data);
+    })
+});//DOMCONTENTLOADED ENDING
