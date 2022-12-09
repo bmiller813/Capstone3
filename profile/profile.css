@@ -1,75 +1,83 @@
-body{
-    margin-top: 20px;
-    background-color: black;
-}
-.main{
-    padding: 15px;
+body {
     font-family: Arial, Helvetica, sans-serif;
-}
-.topbar{
-    background-color: rgb(134, 28, 28);
-    overflow: hidden;
-}
-.topbar a{
-    float: right;
-    color: whitesmoke;
-    text-align: center;
-    padding: 20px 26px;
-    text-decoration: none;
-    font-size: 26px;
-}
-.sidebar{
-    background-color: black;
-    color: white;
-    height: 100%;
-}
-.sidebar a{
-    margin-left: 10px;
-    display: block;
-    color: white;
-    padding-bottom: 10px;
-    font-size: 30px;
-    text-decoration: none;
-}
-.card{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-.content{
-    background-color: whitesmoke;
+    margin-top: 20px;
+    background-color: #7b0b1e;
+    background-image: url(https://thumbs.gfycat.com/CarefulInsignificantDuckbillcat-size_restricted.gif);
+    background-size: cover;
 }
 
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
-
-  h1{
-    text-align: center;
-    }
-
-h5{
-    text-align: center;
+#ppic2{
+    display: inline-block;
+    border: 3px solid #f1f1f1;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 25px;
+    margin-top: 100px;
+    margin-left: -300px;
+    height: 40vh;
+    width: 100vh;
+    /* background-color: black; */
 }
 
-.right {
-    min-width: 600px;
-    min-height: 20%;
-    margin: 0 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
+#picC{
+    display: inline-block;
+    border: 3px solid #f1f1f1;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background-image: url("images/ken_glitch.gif");
+    height: 40vh;
+    width: 39vh;
 }
 
-#messageBtn{
-  margin: 0 auto;
-  padding: 10px;
-  width: 10%;
+
+#subArea{
+    /* margin: 500px ; */
+    margin-left: 700px;
+    margin-top: -300px;
 }
 
-#messageBtn:hover{
+#messageBtn {
+    margin-left:160px;
+    height: 50px;
+    width: 200px;
+}
+
+#messageBtn:hover {
     cursor: pointer;
 }
+
+#menuBar1,
+#menuBar2,
+#menuBar3,
+#sideBar {
+    background-color: white;
+}
+
+#sideList a,
+#logoutBtn{
+    color:#7b0b1e;
+}
+
+#logoutBtn{
+    display:block;
+    color: #7b0b1e;
+    background-color: white;
+    padding: 1em;
+    text-decoration: none;
+    font-size: larger;
+    cursor: pointer;
+    border:none;
+  }
+
+  #sideList a:hover,
+  #logoutBtn:hover{
+    color: black;
+  }
+
+  #greetMsg{
+    margin-top: -400px;
+    margin-left: 1230px;
+    font-weight:bolder;
+    font-size: larger;
+  }

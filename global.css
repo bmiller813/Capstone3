@@ -78,7 +78,8 @@ a {
     cursor:pointer;
 }
 
-#sideList a:hover{
+#sideList a:hover, 
+#logoutBtn:hover{
     color: #7b0b1e;
     font-size: medium;
     transition: 0.3s;

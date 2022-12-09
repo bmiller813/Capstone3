@@ -1,51 +1,101 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <link rel="stylesheet" href="profile.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- Global CSS (CSS rules you want applied to all pages) -->
+    <link rel="stylesheet" href="/global.css">
+
+    <!-- Page-specific CSS -->
+    <link rel="stylesheet" href="/profile/profile.css">
+
+    <title>/POSTS</title>
+
+    <!-- Run BEFORE page is finished loading (before window.onload): -->
     <script src="/auth.js"></script>
     <script src="/profile/profile.js"></script>
+
     <script>
         if (isLoggedIn() === false) window.location.replace("/index.html");
     </script>
 </head>
 
 <body>
-    <div class="container">
-        <div class="main">
-            <div class="topbar">
-                <button type="button" id="logoutBtn" class="btn btn-default btn-sm">
-                    <span class="glyphicon glyphicon-log-out"></span> Log out
-                </button>
-                <a href="">Support</a>
-                <a href="">Settings</a>
-                <a href="/posts/index.html">Home</a>
+    <nav id="nav" class="navbar">
+        <div id="menuBtn" class="menuBtn" onclick="menuBarChange(this)">
+            <div id="menuBar1" class="menuBar1"></div>
+            <div id="menuBar2" class="menuBar2"></div>
+            <div id="menuBar3" class="menuBar3"></div>
+
+            <div class="sideBar" id="sideBar">
+                <ul id="sideList">
+                    <li><a href="/registration/register.html">Registration</a></li>
+                    <li><a href="/posts/index.html">Posts</a></li>
+                    <li>
+                        <button type="button" id="logoutBtn">
+                            Logout
+                        </button>
+                    </li>
+                </ul>
             </div>
-            <div class="row">
-                <div class="col-md-4 mt-1">
-                    <div class="card text-center sidebar">
-                        <div class="card-body">
-                            <img src="images/ken_glitch.gif"
-                            height="375" width="125"
-                            height="300" width="150" class="center">
-                            <div class="mt-3">
-                                <h1>Ken Kaneki</h1>
-                                <h5>“ The pain you feel today will be the<br> strength you'll have tomorrow.”</h5>
-                                <div class="right">
-                                    <textarea id="msgArea" name="msgArea" rows="4" cols="60"></textarea>
-                                    <br>
-                                    <input id="messageBtn" type="submit">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-8 mt-1">
-                    <div class="card mb-3 content">
-                    </div>
-                </div>
-            </div>
+
+            <header>
+                <h1>PROFILE POST</h1>
+            </header>
+
         </div>
-    </div>
+    </nav>
+    <!-- ======================MAIN BODY======================= -->
+    <main>
+        <section class="col-lg-4 offset-lg-4" id="pPic">
+            <container id="ppic2">
+            <container id="picC"></container>
+            
+            <div id="subArea">
+                <textarea id="msgArea" name="msgArea" rows="4" cols="60"></textarea>
+                <br>
+                <input id="messageBtn" type="submit">
+            </div>
+        </container>
+        </section>
+        <div id="greetMsg">
+            WELCOME
+            
+        </div>
+    </main>
+
+    <!-- Bootstrap Bundle (including Popper for popovers) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <script src="/bar.js"></script>
 </body>
 
 </html>
+
+<!-- <div class="row">
+    <div class="col-md-4 mt-1">
+        <div class="card text-center sidebar">
+            <div class="card-body">
+                <img src="images/ken_glitch.gif"
+                height="375" width="125"
+                height="300" width="150" class="center">
+            </div>
+        </div>
+        <textarea id="msgArea" name="msgArea" rows="4" cols="60"></textarea>
+        <br>
+        <input id="messageBtn" type="submit">
+    </div>
+    <div class="col-md-8 mt-1">
+        <div class="card mb-3 content">
+        </div>
+    </div>
+</div> -->

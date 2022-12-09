@@ -63,10 +63,6 @@
     }
   }
 
-  #logoutBtn:hover{
-    color: blue;
-  }
-
   #sideBar2 {
     position: fixed;
     width: 300px;
@@ -95,6 +91,3 @@
   cursor: pointer;
 }
 
-#logoutBtn:hover{
-  color: #7b0b1e;
-}
